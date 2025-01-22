@@ -7,13 +7,13 @@ size_t	ft_strspn(const char *s, const char *accept)
 	int check;
 
 	i = 0;
-	while (s[i])
+	while (s[1])
 	{
 		j = 0;
 		check = 0;
 		while (accept[j])
 		{
-			if(s[i] == accept[j])
+			if (s[i] == accept[j])
 				check = 1;
 			j++;
 		}
@@ -21,12 +21,12 @@ size_t	ft_strspn(const char *s, const char *accept)
 			return (i);
 		i++;
 	}
-	return (i);
+	return(i);
 }
 
 int main()
 {
 	char *s = "hello";
-	const char *accept = "jkdfdf";
+	const char *accept = "helloc";
 	printf("%zu\n", ft_strspn(s, accept));
 }
