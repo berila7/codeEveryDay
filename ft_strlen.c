@@ -11,8 +11,3 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-int main(int ac, char *arv[])
-{
-	char *str = "mohammed";
-	printf("%d" ,ft_strlen(str));
-}
