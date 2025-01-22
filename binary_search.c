@@ -4,9 +4,10 @@
 
 int	b_search(int arr[], int start, int end, int target)
 {
-	int mid = start + (start - end) / 2;
+	int mid;
 	while (start < end)
 	{
+		mid = start + (end - start) / 2;
 		if (arr[mid] == target)
 			return (mid);
 		else if (arr[mid] < target)
@@ -24,8 +25,8 @@ int main()
 	int end = sizeof(arr) / sizeof(int);
 	int start = 0;
 	int result = b_search(arr, start, end, target);
-	if (result != -1)
-		printf("target found at [%d]\n", result);
-	else
+	if (result == -1)
 		printf("target not found\n");	
+	else
+		printf("target found at [%d]\n", result);
 }
